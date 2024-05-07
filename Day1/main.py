@@ -22,6 +22,6 @@ print("hello" " " + input("what is your name my friend?"))
 
 
 
-#variables are created w/o using a key word. python uses snake_cake to name variables
+#variables are created w/o using a key word. python uses snake_case to name variables
 name = input("what is your name boi? ")
 print(name)
