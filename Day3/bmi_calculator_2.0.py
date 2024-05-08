@@ -19,8 +19,12 @@ total_height_in_meters = convert_height_ft_to_meter + convert_height_in_to_meter
 # perform calculation, get bmi
 BMI = round(convert_weight_to_kg / (total_height_in_meters ** 2), 2)
 
-# without f-string
-# print("your BMI is: " + str(BMI))
+if BMI >= 30:
+    print(f"your BMI is : {BMI}, Please join a gym fattie")
+elif BMI >= 25 and BMI < 29.9:
+    print(f"your BMI is : {BMI}, Do some jumping jax slightly less fattie")
+elif BMI >= 18.5 and BMI <= 24.9:
+    print(f"your BMI is : {BMI}, you good bro, Treat your self with some ice-cream")
+elif BMI < 18.5:
+    print(f"your BMI is : {BMI}, Eat a steak twig")
 
-# f-string. used to concatanate, automatic type conversation. ex print(f"tes result is {result}")
-print(f"your BMI is : {BMI}")
