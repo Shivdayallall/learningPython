@@ -1,8 +1,8 @@
 from art import logo
 
-
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
-            'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+            'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+            'q', 'r', 's', 't', 'u',
             'v', 'w', 'x', 'y', 'z']
 #BUG- index out of range error is thrown when a word that starts with the letter z is being encoded, to fix the bug copy and paste the value in the alphabet again
 
@@ -17,7 +17,6 @@ while should_continue:
 
 
     #TODO-1: Create a function called 'encrypt' that takes the text and shift as inputs.
-
 
     def encrypt(plain_text, shift_amount):
         #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.
@@ -36,9 +35,7 @@ while should_continue:
 
     #TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message.
 
-
     #encrypt(text, shift)
-
 
     #Decode
     #TODO-1: Create a different function called 'decrypt' that takes the 'text' and 'shift' as inputs.
@@ -59,16 +56,13 @@ while should_continue:
 
     #decrypt(text, shift)
 
-
     #TODO-3: Check if the user wanted to encrypt or decrypt the message by checking the 'direction' variable. Then call the correct function based on that 'drection' variable. You should be able to test the code to encrypt *AND* decrypt a message.
     if direction == "encode":
         encrypt(text, shift)
     elif direction == "decode":
         decrypt(text, shift)
 
-
     results = input("Do you want to continue? yes or no?:  \n")
     if results == "no":
         should_continue = False
         print("Goodbye")
-
