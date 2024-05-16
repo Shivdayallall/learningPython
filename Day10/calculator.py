@@ -1,5 +1,7 @@
 from art import logo
+
 print(logo)
+
 
 #Build a normal calculator
 def add(n1, n2):
@@ -26,13 +28,11 @@ operators = {
 }
 
 
-
 def calculator():
     num1 = int(input("Enter first number: \n"))
 
     for symbol in operators:
         print(symbol)
-
 
     should_continue = True
 
@@ -51,7 +51,7 @@ def calculator():
         else:
             should_continue = False
             calculator()
+            #used recursion
 
 
 calculator()
-
