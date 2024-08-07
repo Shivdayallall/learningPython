@@ -19,10 +19,10 @@ class Paddle(Turtle):
 
     def go_up(self):
         # take the current position of the y cor and add 20 to it
-        new_y_position = self.ycor() + 20
+        new_y_position = self.ycor() + 30
         self.goto(self.xcor(), new_y_position)
 
     def go_down(self):
         # take the current position of the y cor and add 20 to it
-        new_y_position = self.ycor() - 20
+        new_y_position = self.ycor() - 30
         self.goto(self.xcor(), new_y_position)

@@ -20,8 +20,8 @@ screen.listen()
 screen.onkey(right_paddle.go_up, "Up")
 screen.onkey(right_paddle.go_down, "Down")
 
-screen.onkey(left_paddle.go_up, "W")
-screen.onkey(left_paddle.go_down, "S")
+screen.onkey(left_paddle.go_up, "w")
+screen.onkey(left_paddle.go_down, "s")
 
 
 game_is_on = True
@@ -29,5 +29,16 @@ while game_is_on:
     time.sleep(0.1)
     screen.update()
     ball.move()
+
+    # Detect ball collision with the wall
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce_y()
+
+    # Detect ball collision with paddles
+    if ball.distance(right_paddle) < 50 and ball.xcor() > 320 or ball.distance(left_paddle) < 50 and ball.xcor() < -320:
+        ball.bounce_x()
+
+    # Detect if ball goes beyond the paddle
+    
 
 screen.exitonclick()
