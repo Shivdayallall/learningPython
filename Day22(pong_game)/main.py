@@ -39,6 +39,6 @@ while game_is_on:
         ball.bounce_x()
 
     # Detect if ball goes beyond the paddle
-    
+
 
 screen.exitonclick()
